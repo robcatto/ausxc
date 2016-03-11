@@ -1,3 +1,3 @@
 # ausxc
-Ausxc Repo
+Ausxc Wordpress Theme
 
