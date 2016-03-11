@@ -1,3 +1,3 @@
-# ausxc
+# AUSXC
 Ausxc Wordpress Theme
 
