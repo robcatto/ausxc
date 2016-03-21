@@ -1,0 +1,401 @@
+/**
+ * Base SCSS
+ */
+
+
+
+	h1 {
+		font-family: Helvetica Neue;
+		font-weight: 600;
+		color: #323232;
+		margin: 0px;
+		@include r(240)  { font-size: 21px;  }
+		@include r(320)  {  }
+		@include r(480)  {  }
+		@include r(768)  { font-size: 36px; }
+		@include r(1024) {  }
+		@include r(1280) {  }
+
+	}
+
+
+
+	h2 {
+		@include r(240)  { font-size: 21px;  }
+		@include r(320)  {  }
+		@include r(480)  {  }
+		@include r(768)  { font-size: 24px; }
+		@include r(1024) {  }
+		@include r(1280) {  }
+	}
+
+	a {
+		font-family: Helvetica Neue;
+	}
+
+
+/* ----------------------------------------------------------------------------
+* General Format Classes
+* ------------------------------------------------------------------------- */
+
+	.site-max-width {
+	@include r(240)  { max-width: 940px; }
+	@include r(1024) { max-width: 1040px;  }
+	@include r(1280) { max-width: 1040px;  }
+
+	}
+
+	.max-width-640 {
+		max-width: 640px;
+	}
+
+	.site-padding {
+		@include r(240)  { padding: 0px 20px;}
+		@include r(1024) { padding: 0px 20px;  }
+		@include r(1280) { padding: 0px 20px;  }
+	}
+
+	.centerDiv {
+		margin: 0 auto;
+	}
+
+	.table {
+		display: table;
+	}
+
+	.tableCell {
+		display: table-cell;
+	}
+
+	.verticalAlignMiddle {
+		vertical-align: middle;
+	}
+
+	.verticalAlignBottom {
+		vertical-align: bottom;
+	}
+
+	.inline {
+		display: inline;
+	}
+
+	.block {
+		display: block;
+	}
+
+/* ----------------------------------------------------------------------------
+* Layout Change Classes
+* ------------------------------------------------------------------------- */
+
+.streamAreaWithSideBar {
+
+	@include r(240)  {  }
+	@include r(320)  {  }
+	@include r(480)  {  }
+	@include r(768)  {  }
+	@include r(1024) { 	width: auto;  margin-right: 400px; }
+	@include r(1280) {  }
+}
+
+.whiteMobile {
+	background: white;
+}
+
+
+/* ----------------------------------------------------------------------------
+* Navigation Area
+* ------------------------------------------------------------------------- */
+
+	.brandBarMobile {
+		width: 100%;
+		position: relative;
+		top: 0px;
+		@include r(240)  { height: 50px; background: $w; }
+		@include r(320)  {   }
+		@include r(480)  {   }
+		@include r(768)  {  }
+		@include r(1024) { display: none;  }
+		@include r(1280) {   }
+
+	}
+
+	.navBarMobile {
+		width: 100%;
+		position: relative;
+		@include r(240)  { height: 50px; background: $m; }
+		@include r(320)  {   }
+		@include r(480)  {   }
+		@include r(768)  {   }
+		@include r(1024) { display: none; }
+		@include r(1280) {   }
+	}
+
+	.navBarMobile > .menu-main-container {
+		@extend .site-padding;
+		@extend .max-width-640;
+		@extend .centerDiv;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.navBarMobile > .menu-main-container>ul {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		padding-left: 0;
+		margin: 0;
+		min-width: 683px;
+	}
+
+	.navBarMobile > .menu-main-container>ul>li {
+		list-style: none;
+		display: block;
+		line-height: 46px;
+
+		position: relative;
+	}
+
+	.navBarMobile > .menu-main-container>ul>li>a {
+		color: #323232;
+		font-size: 14px;
+		font-weight: 500;
+		top: 2px;
+		position: relative;
+	}
+
+	.current-menu-item {
+		border-bottom: 3px solid #00aae7;
+	}
+
+
+.navBarDesktop {
+		width: 100%;
+		height: 63px;
+		position: absolute;
+		top: 0px;
+		z-index: 9999;
+	@include r(240)  { display: none; }
+	@include r(320)  {   }
+	@include r(480)  {   }
+	@include r(768)  {   }
+	@include r(1024) { display: block; background: transparent; }
+	@include r(1280) {   }
+}
+
+.brand {
+	margin: 20px;
+	position: absolute;
+	display: block;
+}
+
+
+
+/* ----------------------------------------------------------------------------
+* Featured Story Area
+* ------------------------------------------------------------------------- */
+
+
+	.featured-story-image {
+		width: 100%;
+		position: relative;
+		top: 0px;
+		@include r(240)  { height: 263px; margin-bottom: 25px; }
+		@include r(320)  { height: 263px;  }
+		@include r(480)  { height: 372px;  }
+		@include r(768)  { height: 480px;  }
+		@include r(1024) { height: 600px; margin-bottom: 24px; }
+		@include r(1280) { height: 722px;  }
+
+	}
+
+	.featured-story-image-overlay {
+	background-color: rgba(0,0,0,0.28);
+		@include r(240)  { height: 263px; }
+		@include r(320)  { height: 263px;  }
+		@include r(480)  { height: 372px;  }
+		@include r(768)  { height: 480px;  }
+		@include r(1024) { height: 600px;  }
+		@include r(1280) { height: 722px;  }
+	}
+
+	.featured-story-title {
+		color: white;
+		max-width: 573px;
+		margin: 0.67em 0;
+	}
+
+	.headline-kicker {
+		margin-bottom: 15px;
+	}
+
+	.headline-kicker > a {
+		background: #00AAE7;
+		border-radius: $mediumBorderRadius;
+		color: #fff;
+		padding: 7px 11px;
+		text-transform: uppercase;
+		font-weight: 600;
+
+		@include r(240)  { font-size: 12px;  }
+		@include r(320)  {  }
+		@include r(480)  {  }
+		@include r(768)  { font-size: 14px; }
+		@include r(1024) {  }
+		@include r(1280) {  }
+	}
+
+
+
+/* ----------------------------------------------------------------------------
+* Article Stream
+* ------------------------------------------------------------------------- */
+
+	//Hide Sticky Articles From Stream
+
+	.sticky {
+		display: none;
+	}
+
+
+	//Card Style
+
+	.card {
+		box-shadow: $mediumArticleShadow;
+		border: $mediumArticleBorder;
+		border-radius: $mediumBorderRadius;
+		background: white;
+		@include r(240)  {  }
+		@include r(320)  {   }
+		@include r(480)  {   }
+		@include r(768)  {   }
+		@include r(1024) {   }
+		@include r(1280) {   }
+
+	}
+
+	// Parent Styles
+
+
+	.streamItemPost {
+		margin-bottom: 20px;
+	}
+
+	.streamItemPost-inner {
+		padding: 20px 0px;
+	}
+
+	.streamItemTitle {
+		margin: 14px 0px;
+		color: #323232;
+	}
+
+
+	/* ----------------------------------------------------------------------------
+	* Article Stream Meta
+	* ------------------------------------------------------------------------- */
+
+	.streamItemPost-meta {
+		padding-left: 10px;
+		color: rgba(0,0,0,.44);
+		font-size: 12px;
+	}
+
+	.author-image > img {
+		width: 36px;
+		height: auto;
+		border-radius: 100%;
+		border: 1px solid rgba(216,216,216,0.50);
+
+	}
+
+	.middotDivider::after {
+		content: "·";
+	}
+
+	.block-postMeta {
+
+	}
+
+/* ----------------------------------------------------------------------------
+* Article Stream Meta
+* ------------------------------------------------------------------------- */
+
+
+.fullBleedItemTitleMobile {
+	padding: 20px;
+}
+
+.item-content {
+	@include r(240)  { width: 86.25%; margin: auto; overflow: hidden; }
+	@include r(320)  {   }
+	@include r(480)  {   }
+	@include r(768)  {   }
+	@include r(1024) { width: 940px;  margin: auto;  min-width: 940px; }
+	@include r(1280) {   }
+}
+
+.item-body p {
+	position: relative;
+	margin: 0;
+	line-height: 1.6;
+	color: #4c4c4c;
+	-webkit-transition: background .5s ease 0s;
+	-moz-transition: background .5s ease 0s;
+	-ms-transition: background .5s ease 0s;
+	-o-transition: background .5s ease 0s;
+	transition: background .5s ease 0s;
+	@include r(240)  { font: 17px/27px 'PT Serif',Georgia,serif; padding: 10px 0; }
+	@include r(320)  {   }
+	@include r(480)  {   }
+	@include r(768)  {   }
+	@include r(1024) { font: 20px/30px 'PT Serif',Georgia,serif; padding: 16px 0; }
+	@include r(1280) {   }
+}
+
+.item-body:first-of-type > p {
+	padding-top: 24px;
+}
+
+.wp-caption-text {
+	font-size: 14px;
+	background: 0 0;
+	padding: 15px 0;
+	position: static;
+	left: auto;
+	top: auto;
+	width: 100%;
+	font: sans-serif;
+	line-height: 25px;
+	color: #a1a1a1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wp-caption {
+	@include r(240)  { padding-top: 14px; margin-bottom: 10px; margin-top: 10px; }
+	@include r(320)  {   }
+	@include r(480)  {   }
+	@include r(768)  { padding-top: 24px;  }
+	@include r(1024) {  }
+	@include r(1280) {   }
+}
+
+.wp-caption-text:after {
+	content: '';
+	display: block;
+	height: 1px;
+	position: relative;
+	left: 0;
+	right: 0;
+	background: url(svg/dot.svg) repeat-x;
+	bottom: -15px;
+}
+
+
+
